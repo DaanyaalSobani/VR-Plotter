@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VR Plotter</title>
+    <link rel="icon" href="favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style media="screen">
+  .nav-itmem {
+    color: white;
+  }
+  #coolbutton
+{
+    border: none;
+    background: #6772e5;
+    font-family: ls-medium, ls-bold, Helvetica, sans-serif;
+    color: #FFF;
+    letter-spacing: 0.4px;
+    font-size: 14.5px;
+    font-weight: normal !important;
+    padding: 13px 20px;
+    min-width: 112px;
+    display: inline-block;
+    width: 20%;
+    margin-left: 37.5%;
+    text-align: center;
+    margin-top: 40px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    border-radius: 5px;
+    transition:All 0.1s ease-in-out;
+  -webkit-transition:All 0.1s ease-in-out;
+  -moz-transition:All 0.1s ease-in-out;
+  -o-transition:All 0.1s ease-in-out;
+  text-decoration: none;
+}
+#coolbutton:hover
+{
+  background: #4a54b8;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
+}
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand" href="http://www.daanyaalsobani.com" style="color:white">Daanyaal Sobani</a>
+
+</nav>
+
+  </head>
+  <body >
+    <div class="container-fluid text-center">
+        <img class= "img-fluid " src="sin.png" alt="" style= "max-width:80%;height:auto">
+    </div>
+
+    <div class="container text-center" >
+	<hr style = "border-width:4px; border-color:black">
+      <h1>
+          3D Plotter by Daanyaal Sobani
+      </h1>
+          <form action="plot.php" method="get">
+            <div class="form-group" action="props.php" method="get">
+              <label for="formGroupExampleInput">Enter your function bellow and DO NOT INCLUDE  z or =</label>
+              <input type="text" class="form-control" name="exp" value="">
+            </div>
+            <button type="submit" class="btn btn-primary">PLOT</button>
+          </form>
+        <p>
+          Make sure to enter your expresion in the form z = f(x,y); <br>
+          In order to use functions like sin(x) or e <sup> x </sup> use <br>
+          Math.sin(x) or Math.exp(x) for example (case sensitive).<br>
+        <bold>  Use W S A D to navigate and drag the mouse to change direction. </bold>
+        </p>
+        <h1>
+           Examples:
+        </h1>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="exp.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Guassian Distribution</h5>
+                    <p class="card-text">Input to plotter: <br>
+                      3*Math.exp(-Math.pow(x,2)-Math.pow(y,2)) </p>
+                    <a href="http://daanyaalsobani.com/daanyaalsobani.com/admin/plot/plot.php?exp=3*Math.exp%28-Math.pow%28x%2C2%29-Math.pow%28y%2C2%29%29" class="btn btn-primary">
+                      Plot</a>
+                </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="hyp.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Parabolic Bowel</h5>
+                    <p class="card-text">Input to plotter: <br>
+                                          Math.pow(x,2) + Math.pow(y,2)</p>
+                    <a href="http://daanyaalsobani.com/plot/plot.php?exp=Math.pow%28x%2C2%29+%2B+Math.pow%28y%2C2%29" class="btn btn-primary">Plot</a>
+                </div>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="sinpluscos.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Sin(x) + Cos(y)</h5>
+                    <p class="card-text">Input to Plotter: <br>
+                    Math.sin(x)+Math.cos(y) </p>
+                    <a href="http://daanyaalsobani.com/plot/plot.php?exp=Math.sin%28x%29%2BMath.cos%28y%29" class="btn btn-primary">Plot</a>
+                </div>
+            </div>
+          </li>
+        </ul>
+          </div>
+    <div class="container-fluid text-center"id="" style="padding:75px;margin-top:125px; background:#01052A">
+      <h1 style="color:white;">Any questions?</h1>
+      <h2 style="color:white;">Feel free to email me at daanyaal.sobani@gmail.com <br>
+        or go to the <a href="https://github.com/DaanyaalSobani/VR-Plotter"> github </a> for documentation</h2>
+    </div>
+
+
+
+
+      <footer style="background:black; margin-bottom:0px">
+        <p style="margin:0px; color:black">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+      </footer>
+</html>
