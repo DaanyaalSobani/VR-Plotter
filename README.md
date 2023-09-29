@@ -6,5 +6,5 @@ the various features of the function.
 To use you can either go to:
 http://daanyaalsobani.com/plot/
 
-Or download eveerything and run it on a local server. Enter the function in the prompt on the index.html. You will be redirected to the 
+Or download everything and run it on a local server. Enter the function in the prompt on the index.html. You will be redirected to the 
 VR enviroment.
